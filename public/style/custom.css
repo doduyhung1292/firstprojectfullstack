@@ -1,0 +1,7 @@
+.body {
+	background-image: url('/image/treeimage')
+}
+.view {
+	color: blue;
+	font-size: 2rem;
+}
