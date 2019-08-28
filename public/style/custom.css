@@ -2,6 +2,22 @@
 	background-image: url('/image/treeimage')
 }
 .view {
-	color: blue;
-	font-size: 2rem;
+	color: #7f78b9;
+	font-size: 1.5rem;
+	background-color: #c2bbf9;
+	height: 2rem;
+	width: 7rem;
+	border-radius: 2rem;
+    border: 0.5px solid #aaa;
 }
+.create {
+	color: #7f78b9;
+	font-size: 1.5rem;
+	background-color: #c2bbf9;
+	height: 2rem;
+	width: 7rem;
+	border-radius: 2rem;
+    border: 0.5px solid #aaa;
+}
+
+
