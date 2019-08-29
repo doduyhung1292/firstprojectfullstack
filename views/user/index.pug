@@ -1,14 +1,21 @@
-html
- head
-  link(rel="stylesheet", href="/style/view.css")
- body
+extends ../layouts/common.pug
 
-  h1 Search user name
-  form(action="/user/search", method="GET")
-    input(type="text", placeholder="search..." name="q")
-    button search
-
-  ol
-    each user in users
-      li= user.name
-      a(href="/user/view/" + user.id) view
+block content
+    h1 
+      span.mr-3 User 
+      a.btn.btn-primary(href="/user/create") Create New
+    .d-flex.align-items-center     
+      form.ml-auto.d-flex(action="/user/search", method="GET")
+          input.form-control(type='text', placeholder='Search', aria-label='Search' name='q')
+          button.btn.btn-primary.ml-2(type='submit') Search
+    table.table
+        tr
+         th Name
+         th Phone
+         th Action
+        each user in users
+         tr
+          td= user.name
+          td= user.phone
+          td
+            a.btn.btn-light(href="/user/view/" + user.id) view 
