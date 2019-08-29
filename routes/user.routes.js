@@ -3,12 +3,13 @@ var router = express.Router();
 var shortid = require('shortid');
 var controller = require('../controller/user.controller')
 var validate = require('../validate/user.validate');
-
+var authMiddleware = require('../middleware/auth.middleware');
 var db = require('../db');
+var cookieParser = require('cookie-parser');
 
 // render
 
-router.get('/', controller.index);
+router.get('/',authMiddleware.requireAuth, controller.index);
 // search
 router.get('/search', controller.search);
 // view user

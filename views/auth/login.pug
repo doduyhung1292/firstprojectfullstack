@@ -7,13 +7,13 @@ block content
      each error in errors
       .alert.alert-danger= error
 
-    form(action="/user/create", method="POST")
+    form( method="POST")
      .form-group
       label(for="email") Email:
-      input#email.form-control(type="text", placeholder="name", name="name", value=values ? values.email : "")
+      input#email.form-control(type="text", placeholder="email", name="email", value=values ? values.email : "")
      .form-group
-      label(for="Password") Password:
-      input#Password.form-control(type="number", placeholder="Password", name="Password", value=values ? values.Password : "")
+      label(for="password") Password:
+      input#Password.form-control(type="number", placeholder="password", name="password", value=values ? values.password : "")
 
 
       button.btn.btn-primary Login
