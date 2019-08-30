@@ -7,13 +7,22 @@ block content
      each error in errors
       .alert.alert-danger= error
 
-    form(action="/user/create", method="POST")
+    form(action="/user/create", method="POST", enctype="multipart/form-data")
+     .form-group
+      label(for="email") Email:
+      input#name.form-control(type="text", placeholder="email", name="email", value=values ? values.email : "")
+     .form-group
+      label(for="password") Password:
+      input#name.form-control(type="password", placeholder="password", name="password", value=values ? values.password : "")
      .form-group
       label(for="name") Name:
       input#name.form-control(type="text", placeholder="name", name="name", value=values ? values.name : "")
      .form-group
       label(for="phone") Phone:
       input#phone.form-control(type="number", placeholder="phone", name="phone", value=values ? values.phone : "")
+     .form-group
+      label(for="avata") Avata:
+      input#avata.form-control-file(type="file", name="avata")
 
 
       button.btn.btn-primary Create

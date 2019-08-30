@@ -10,11 +10,16 @@ block content
           button.btn.btn-primary.ml-2(type='submit') Search
     table.table
         tr
+         th Avata
+         th Email
          th Name
          th Phone
          th Action
         each user in users
          tr
+          td
+            img(src=user.avata, width="30") 
+          td= user.email
           td= user.name
           td= user.phone
           td

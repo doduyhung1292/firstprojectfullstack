@@ -1,0 +1,12 @@
+extends ../layouts/common.pug
+block content
+  h3 Product
+  div.container
+    div.row
+      div.col-sm-3
+        img(src="")
+        each product in products 
+          h5= product.description
+        each product in products
+          p=  product.content
+        button(type="button", class="btn btn-primary") Primary
